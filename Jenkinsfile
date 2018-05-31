@@ -1,4 +1,4 @@
-def CONTAINER_NAME="ositest"
+def CONTAINER_NAME="consumerapp"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="rajugade"
 def HTTP_PORT="8099"
@@ -80,8 +80,8 @@ def runApp(containerName, tag, dockerHubUser, httpPort){
 def deployKube(){
       //  sh "kubectl delete deployment appname"
       //  sh "kubectl delete service appname"
-        sh "kubectl run appname --image=docker.io/rajugade/ositest:latest --port=8080"
+        sh "kubectl run consumerapp --image=docker.io/rajugade/consumerapp:latest --port=8080"
         sh "kubectl get deployments"
-        sh "kubectl expose deployment appname --type=NodePort"
+        sh "kubectl expose deployment consumerapp --type=NodePort"
   
 }
