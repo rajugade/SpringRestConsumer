@@ -10,10 +10,9 @@ import org.springframework.web.client.RestTemplate;
 public class Controller {
 	
 	
-	private String url = "http://localhost:9898/SpringKube/employee";
+	private String url = "http://192.168.99.100:30007/SpringKube/employee";
 	
 	@RequestMapping( value="/consumeemp", method= RequestMethod.GET, produces = "application/json")
-	@ResponseBody
 	public Employee employee() {
 		RestTemplate template = new RestTemplate();
 				
